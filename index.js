@@ -1,16 +1,7 @@
-// creatting http / 
+const users = [{
 
-const express = require('express');
-
-const app = express(); 
-
-// request methods are : GET,POST,PUT,DELETE // 
-
-
-
-
-app.get("/",(req,res) =>{
-   
-})
-
-app.listen(3000);
+    username:"amit",
+    kidneys:[{
+        healthy:false,
+    }]
+}];
