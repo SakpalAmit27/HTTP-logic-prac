@@ -1,3 +1,7 @@
+const express = require("express");
+
+const app = express(); 
+
 const users = [{
 
     username:"amit",
@@ -5,3 +9,9 @@ const users = [{
         healthy:false,
     }]
 }];
+
+
+
+
+
+app.listen(3000);
