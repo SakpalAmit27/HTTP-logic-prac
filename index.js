@@ -10,6 +10,13 @@ const users = [{
     }]
 }];
 
+app.get("/",(req,res) => {
+
+    const user_kidneys = users[0].kidneys;
+
+    res.send(user_kidneys)
+
+})
 
 
 
