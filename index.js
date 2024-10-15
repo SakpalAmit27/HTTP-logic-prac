@@ -6,7 +6,7 @@ const users = [{
 
     username:"amit",
     kidneys:[{
-        healthy:false,
+        healthy:true,
     }]
 }];
 
@@ -16,7 +16,7 @@ app.get("/",(req,res) => {
 
     // counting no of kidneys // 
 
-    const number_of_kidneys = kidneys.length;
+    const number_of_kidneys = user_kidneys.length;
 
     let number_of_healthy_kidneys = 0; 
 
@@ -26,7 +26,14 @@ app.get("/",(req,res) => {
         }
     }
 
-    
+    const number_of_unhealthy_kidneys = number_of_kidneys - number_of_healthy_kidneys
+
+    res.json({
+        number_of_kidneys,
+        number_of_healthy_kidneys,
+        number_of_unhealthy_kidneys
+    })
+
 
 
 })
