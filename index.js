@@ -6,7 +6,7 @@ const users = [{
 
     username:"amit",
     kidneys:[{
-        healthy:true,
+        healthy:false,
     }]
 }];
 
@@ -36,6 +36,17 @@ app.get("/",(req,res) => {
 
 
 
+})
+
+// to put a kindey // 
+
+app.post("/",(req,res) => {
+    const isHealthy = req.body.isHealthy; 
+
+    // pushing into the users /// 
+    users[0].kidneys.push({
+        healthy:isHealthy
+    })
 })
 
 
