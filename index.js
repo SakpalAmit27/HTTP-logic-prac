@@ -74,5 +74,18 @@ app.put("/unhealthy",(req,res) => {
 
 })
 
+// logic to remove unhealthy kidneys 
+
+app.delete("/",(req,res) =>{ 
+
+    const new_kidneys = []; 
+    for(let i = 0; i<users[0].kidneys.length; i++){
+
+        users[0].kidneys = users[0].kidneys.filter((kid_ney) => kid_ney.healthy)
+    }
+ 
+    res.json({msg:"removed unhealthy done"})
+})
+
 
 app.listen(3000);
