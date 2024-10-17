@@ -39,7 +39,7 @@ app.get("/",(req,res) => {
 })
 
 // to put a kindey // 
-
+app.use(express.json());
 app.post("/",(req,res) => {
     
     const isHealthy = req.body.isHealthy; 
