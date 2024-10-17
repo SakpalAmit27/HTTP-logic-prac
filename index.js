@@ -71,9 +71,7 @@ app.put("/unhealthy",(req,res) => {
     }
     res.json({msg:"added unhealthy"})
 
-    if(req > users[0].kidneys.length){
-        res.json({"only limited"})
-    }
+
 })
 
 
