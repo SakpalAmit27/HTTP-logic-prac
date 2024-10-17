@@ -41,11 +41,16 @@ app.get("/",(req,res) => {
 // to put a kindey // 
 
 app.post("/",(req,res) => {
+    
     const isHealthy = req.body.isHealthy; 
 
     // pushing into the users /// 
     users[0].kidneys.push({
         healthy:isHealthy
+    })
+
+    res.json({
+        msg:"Done"
     })
 })
 
