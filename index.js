@@ -60,8 +60,21 @@ app.put("/",(req,res) => {
     for(let i = 0; i<users[0].kidneys.length; i++){
         users[0].kidneys[i].healthy = true;
     }
+    res.json({msg:"done"})
 })
 
+// put one unhealthy // 
+
+app.put("/unhealthy",(req,res) => {
+    for(let i = 0; i<users[0].kidneys.length; i++){
+        users[0].kidneys[i].healthy = false;
+    }
+    res.json({msg:"added unhealthy"})
+
+    if(req > users[0].kidneys.length){
+        res.json({"only limited"})
+    }
+})
 
 
 app.listen(3000);
